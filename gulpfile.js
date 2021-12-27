@@ -1,5 +1,7 @@
 const {src,dest,watch } =require('gulp'); 
 const sass = require('gulp-sass')(require('sass'));
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
 
 function css(done){
     //compilar sass
@@ -8,7 +10,7 @@ function css(done){
     //3 Guardar el .css
 
     src('src/scss/app.scss')
-        .pipe( sass() )
+        .pipe( sass({outputStyle:'compressed'}) )
         .pipe( dest('build/css') );
     
     done();    
