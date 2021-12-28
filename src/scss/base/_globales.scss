@@ -14,11 +14,6 @@ p{
     color:v.$negro;
     font-size: 2rem;
 }
-.contendor{
-    width:95%;
-    max-width: 120rem;
-    margin:0 auto;
-}
 a{
     text-decoration: none;
 }
@@ -38,4 +33,10 @@ h2{
 }
 h3{
     font-size: 3.2rem;
+}
+.contenedor{
+    width:95%;
+    max-width: 120rem;
+    margin:0 auto;
+    color: red;
 }

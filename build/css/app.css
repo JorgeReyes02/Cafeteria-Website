@@ -357,12 +357,6 @@ p {
   font-size: 2rem;
 }
 
-.contendor {
-  width: 95%;
-  max-width: 120rem;
-  margin: 0 auto;
-}
-
 a {
   text-decoration: none;
 }
@@ -388,6 +382,17 @@ h3 {
   font-size: 3.2rem;
 }
 
+.contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+ 
+}
+
 .text-center {
   text-align: center;
+}
+
+.bg-primario {
+  background-color: #E8505B;
 }
