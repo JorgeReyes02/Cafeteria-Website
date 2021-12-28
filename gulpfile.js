@@ -6,6 +6,7 @@ const postcss = require('gulp-postcss');
 
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
+const avif = require('gulp-avif');
 
 function css(done){
     //compilar sass
@@ -30,10 +31,16 @@ function imagenes(done){
 
 function versionWebp(){
     return src('src/img/**/*.{png,jpg}')
-        .pipe(wepb())
+        .pipe(webp())
         .pipe(dest('build/img'));
 }
- 
+
+function versionAvif(){
+    return src('src/img**/*.{jpg,png}')
+        .pipe(avif())
+        .pipe(dest('build/img')); 
+
+}
 
 function dev(){
     watch('src/scss/**/*.scss', css);
@@ -43,4 +50,5 @@ exports.css = css;
 exports.dev = dev;
 exports.imagenes = imagenes;
 exports.versionWebp =versionWebp;
-exports.default = series(imagenes,css, dev);
+exports.versionAvif =versionAvif;
+exports.default = series(css, dev);
