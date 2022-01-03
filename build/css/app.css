@@ -400,6 +400,11 @@ h3 {
   padding: 5rem 0;
   position: relative;
 }
+@media (min-width: 768px) {
+  .header {
+    min-height: 70rem;
+  }
+}
 @media (min-width: 480px) {
   .header {
     padding: 4rem;
@@ -427,6 +432,17 @@ h3 {
 }
 .header .contenido-header {
   position: relative;
+}
+.header .contenido-header h1 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .header .contenido-header h1 {
+    margin-top: 10rem;
+  }
 }
 
 .header-inicio {
