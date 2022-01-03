@@ -350,11 +350,13 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  background-color: #EBE7DE;
 }
 
 p {
   color: #000;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
 }
 
 a {
@@ -366,20 +368,10 @@ img {
   display: block;
 }
 
-h1, h2, h3 {
-  margin: 0 0 5rem 0;
-}
-
-h1 {
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 3.6rem;
-}
-
-h3 {
-  font-size: 3.2rem;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .contenedor {
@@ -394,6 +386,41 @@ h3 {
 
 .bg-primario {
   background-color: #5E311E;
+}
+
+h1, h2, h3 {
+  font-family: "Raleway", sans-serif;
+  margin: 0 0 5rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  color: #5E311E;
+}
+h2 span {
+  color: #C39C63;
+  font-size: 1.8rem;
+  display: block;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  background-image: url(../img/cafe.svg);
+  background-size: 10rem;
+}
+
+h3 {
+  font-size: 3.2rem;
 }
 
 .header {
@@ -501,4 +528,45 @@ h3 {
     width: 20rem;
     margin: 0;
   }
+}
+
+.contenido-principal {
+  background-color: #fff;
+  padding: 5rem 2rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .contenido-principal {
+    padding: 10rem;
+    margin-top: -10rem;
+  }
+}
+@media (min-width: 1024px) {
+  .contenido-principal {
+    padding: 10rem;
+    margin-top: -15rem;
+  }
+}
+
+.iconos {
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .iconos .listado-iconos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 5rem;
+       -moz-column-gap: 5rem;
+            column-gap: 5rem;
+  }
+}
+.iconos .listado-iconos li img {
+  margin: 0 auto;
+  width: 12rem;
+}
+.iconos .listado-iconos li p {
+  font-family: "Bona Nova", serif;
+  font-size: 3.2rem;
+  color: #5E311E;
+  text-align: center;
 }
