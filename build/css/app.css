@@ -388,6 +388,14 @@ ul {
   background-color: #5E311E;
 }
 
+.margin-negativo-10 {
+  margin-top: -10rem;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
 h1, h2, .heading-blanco, h3 {
   font-family: "Raleway", sans-serif;
   margin: 0 0 5rem 0;
@@ -679,6 +687,7 @@ h3 {
 @media (min-width: 1024px) {
   .nuestro-menu {
     background-size: 50%, 50%, 100%;
+    background-position: center 5rem, center 92%, 100%;
   }
 }
 
@@ -711,4 +720,26 @@ h3 {
 .menu li .precio {
   font-size: 4rem;
   font-weight: 700;
+}
+
+.nuestros-testimoniales {
+  padding: 10rem 2rem;
+}
+@media (min-width: 768px) {
+  .nuestros-testimoniales {
+    padding: 10rem;
+  }
+}
+.nuestros-testimoniales .testimonial {
+  background-color: #EBE7DE;
+  padding: 2rem 4rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+.nuestros-testimoniales .autor {
+  text-align: right;
+  font-size: 2.4rem;
+  color: #5E311E;
+  font-family: "Bona Nova", serif;
 }
