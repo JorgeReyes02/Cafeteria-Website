@@ -15,6 +15,11 @@
 .footer-box{
     font-family: v.$fuenteCursiva;
     text-align: center;
+    margin-bottom: v.$separacion;
+
+    @include m.tablet { 
+        margin-bottom: 0;
+     }
     h3{
        font-family: v.$fuenteCursiva;
        margin: 0 0 1rem 0;
