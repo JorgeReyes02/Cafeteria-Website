@@ -3,6 +3,8 @@ const {src,dest,watch,series } =require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
+const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('cssnano');
 
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
@@ -15,8 +17,10 @@ function css(done){
     //3 Guardar el .css
 
     src('src/scss/app.scss')
+        .pipe(sourcemaps.init())
         .pipe( sass() )
-        .pipe(postcss( [ autoprefixer() ] ))
+        .pipe(postcss( [ autoprefixer(),cssnano() ] ))
+        .pipe(sourcemaps.write('.')) //Se guarda junto al Build
         .pipe( dest('build/css') );
     
     done();    
